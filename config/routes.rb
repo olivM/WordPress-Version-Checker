@@ -1,7 +1,10 @@
 WordpressVersionChecker::Application.routes.draw do
+
   #get \"users\/show\"
 
-  root :to => "home#index"
+  resources :sites
+
+  root :to => "sites#index"
 
   devise_for :users
   resources :users, :only => :show
