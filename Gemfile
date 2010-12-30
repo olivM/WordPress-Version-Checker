@@ -18,4 +18,5 @@ gem "bson_ext"
 # Bundle gem needed for Devise
 gem "devise"
 
+gem "hirb", :group => :development
 gem "wirble", :group => :development

@@ -1,3 +1,7 @@
 = render 'sites/menu/main'
 %h2= @site.name
 %span.url= @site.url
+
+
+%p= link_to 'Edit', edit_site_path(@site)
+%p= link_to 'Delete', site_path(@site), :method => :delete, :confirm => "Are you sure?"

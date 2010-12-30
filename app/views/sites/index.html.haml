@@ -2,6 +2,7 @@
 %ul
   - @sites.each do |site|
     %li 
-      %span= site.name
+      %span= link_to site.name, site_path(site)
       %ul
         %li= link_to 'Edit', edit_site_path(site)
+        %li= link_to 'Delete', site_path(site), :method => :delete, :confirm => "Are you sure?"
